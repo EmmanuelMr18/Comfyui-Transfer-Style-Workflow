@@ -8,8 +8,10 @@ https://github.com/EmmanuelMr18/Comfyui-Transfer-Style-Workflow/assets/31712515/
 
 The workflow is using IPAdapter and controlnet line art to keep the composition of the base image. 
 
-@@ How to get and API?
-You can deploy this or any workflow to easy to www.comfydeploy.com, if you are interested in this, watch the following video:
+## How to get an API?
+Use this workflow in your apps, You can deploy this or any workflow too easy using www.comfydeploy.com
+
+In the following video I show you how easy is to do it:
 
 https://github.com/EmmanuelMr18/Comfyui-Transfer-Style-Workflow/assets/31712515/594bf3d6-9a40-4439-bb4c-54c47872c482
 
