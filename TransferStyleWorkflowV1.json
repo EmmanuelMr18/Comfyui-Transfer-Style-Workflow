@@ -1,6 +1,6 @@
 {
-  "last_node_id": 208,
-  "last_link_id": 455,
+  "last_node_id": 209,
+  "last_link_id": 458,
   "nodes": [
     {
       "id": 126,
@@ -217,8 +217,8 @@
       "id": 199,
       "type": "Note",
       "pos": [
-        -287.14035786052926,
-        840.7638673152418
+        -286,
+        884
       ],
       "size": {
         "0": 240.38986206054688,
@@ -260,6 +260,29 @@
       "bgcolor": "#653"
     },
     {
+      "id": 201,
+      "type": "Note",
+      "pos": [
+        -1880,
+        866
+      ],
+      "size": {
+        "0": 477.9673156738281,
+        "1": 163.3066864013672
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        " ______                  ___             _____               __              \n|      |.-----.--------.'  _|.--.--.    |     \\.-----.-----.|  |.-----.--.--.\n|   ---||  _  |        |   _||  |  |    |  --  |  -__|  _  ||  ||  _  |  |  |\n|______||_____|__|__|__|__|  |___  |    |_____/|_____|   __||__||_____|___  |\n                             |_____|                 |__|             |_____|\n\nWorflow developed by https://twitter.com/BolilloSpartano\n\nYou can deploy this workflow in https://comfydeploy.com/ and get an API that you can use in your apps."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
       "id": 202,
       "type": "Note",
       "pos": [
@@ -271,7 +294,7 @@
         "1": 96.36078643798828
       },
       "flags": {},
-      "order": 8,
+      "order": 9,
       "mode": 0,
       "properties": {
         "text": ""
@@ -294,7 +317,7 @@
         "1": 200
       },
       "flags": {},
-      "order": 9,
+      "order": 10,
       "mode": 0,
       "outputs": [
         {
@@ -330,7 +353,7 @@
         "1": 200
       },
       "flags": {},
-      "order": 10,
+      "order": 11,
       "mode": 0,
       "outputs": [
         {
@@ -365,7 +388,7 @@
         "1": 82
       },
       "flags": {},
-      "order": 11,
+      "order": 12,
       "mode": 0,
       "outputs": [
         {
@@ -402,7 +425,7 @@
         "1": 82
       },
       "flags": {},
-      "order": 12,
+      "order": 13,
       "mode": 0,
       "outputs": [
         {
@@ -438,7 +461,7 @@
         "1": 58
       },
       "flags": {},
-      "order": 13,
+      "order": 14,
       "mode": 0,
       "outputs": [
         {
@@ -470,7 +493,7 @@
         "1": 58
       },
       "flags": {},
-      "order": 14,
+      "order": 15,
       "mode": 0,
       "outputs": [
         {
@@ -488,6 +511,87 @@
       "widgets_values": [
         "control_v11p_sd15_lineart_fp16.safetensors"
       ]
+    },
+    {
+      "id": 1,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        -1057,
+        1739
+      ],
+      "size": {
+        "0": 315,
+        "1": 98
+      },
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            441
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            442,
+            443
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            277,
+            427
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "juggernaut_reborn.safetensors"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 111,
+      "type": "ComfyDeploy",
+      "pos": [
+        -903,
+        873
+      ],
+      "size": {
+        "0": 210,
+        "1": 96
+      },
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "properties": {
+        "workflow_name": "",
+        "workflow_id": "",
+        "version": ""
+      },
+      "widgets_values": [
+        "Transfer Style",
+        "e20198cd-97b6-4e2e-9f7e-90933ab70ee1",
+        6
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
     },
     {
       "id": 205,
@@ -515,9 +619,9 @@
           "name": "image",
           "type": "IMAGE",
           "links": [
-            447,
             448,
-            449
+            449,
+            456
           ],
           "shape": 3,
           "slot_index": 0
@@ -720,57 +824,6 @@
       "bgcolor": "#533"
     },
     {
-      "id": 139,
-      "type": "Get image size",
-      "pos": [
-        -290.14035786052926,
-        728.7638673152416
-      ],
-      "size": {
-        "0": 236.06361389160156,
-        "1": 68.01216888427734
-      },
-      "flags": {},
-      "order": 22,
-      "mode": 0,
-      "inputs": [
-        {
-          "link": 447,
-          "name": "image",
-          "type": "IMAGE"
-        }
-      ],
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            373
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            374
-          ],
-          "shape": 3,
-          "slot_index": 1
-        },
-        {
-          "name": "TUPLE",
-          "type": "TUPLE",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Get image size"
-      }
-    },
-    {
       "id": 183,
       "type": "PrepImageForClipVision",
       "pos": [
@@ -782,7 +835,7 @@
         "1": 106
       },
       "flags": {},
-      "order": 23,
+      "order": 22,
       "mode": 0,
       "inputs": [
         {
@@ -824,7 +877,7 @@
         "1": 82
       },
       "flags": {},
-      "order": 24,
+      "order": 23,
       "mode": 0,
       "inputs": [
         {
@@ -838,8 +891,7 @@
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            335,
-            405
+            335
           ],
           "shape": 3,
           "slot_index": 0
@@ -852,6 +904,75 @@
         "disable",
         512
       ]
+    },
+    {
+      "id": 209,
+      "type": "Image Size to Number",
+      "pos": [
+        -286,
+        713
+      ],
+      "size": {
+        "0": 229.20001220703125,
+        "1": 126
+      },
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 456
+        }
+      ],
+      "outputs": [
+        {
+          "name": "width_num",
+          "type": "NUMBER",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "height_num",
+          "type": "NUMBER",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "width_float",
+          "type": "FLOAT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "height_float",
+          "type": "FLOAT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "width_int",
+          "type": "INT",
+          "links": [
+            457
+          ],
+          "shape": 3,
+          "slot_index": 4
+        },
+        {
+          "name": "height_int",
+          "type": "INT",
+          "links": [
+            458
+          ],
+          "shape": 3,
+          "slot_index": 5
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Image Size to Number"
+      }
     },
     {
       "id": 134,
@@ -999,31 +1120,6 @@
       "bgcolor": "#533"
     },
     {
-      "id": 189,
-      "type": "PreviewImage",
-      "pos": [
-        560.4143845439447,
-        1885.4039019044153
-      ],
-      "size": {
-        "0": 210,
-        "1": 246
-      },
-      "flags": {},
-      "order": 28,
-      "mode": 0,
-      "inputs": [
-        {
-          "link": 405,
-          "name": "images",
-          "type": "IMAGE"
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "PreviewImage"
-      }
-    },
-    {
       "id": 123,
       "type": "IPAdapterEncoder",
       "pos": [
@@ -1035,7 +1131,7 @@
         "1": 258
       },
       "flags": {},
-      "order": 29,
+      "order": 28,
       "mode": 0,
       "inputs": [
         {
@@ -1110,7 +1206,7 @@
         "1": 202
       },
       "flags": {},
-      "order": 30,
+      "order": 29,
       "mode": 0,
       "inputs": [
         {
@@ -1155,7 +1251,7 @@
         "1": 166
       },
       "flags": {},
-      "order": 31,
+      "order": 30,
       "mode": 0,
       "inputs": [
         {
@@ -1231,7 +1327,7 @@
         "1": 214
       },
       "flags": {},
-      "order": 32,
+      "order": 31,
       "mode": 0,
       "inputs": [
         {
@@ -1299,7 +1395,7 @@
         "1": 178
       },
       "flags": {},
-      "order": 33,
+      "order": 32,
       "mode": 0,
       "inputs": [
         {
@@ -1308,7 +1404,7 @@
           "type": "IMAGE"
         },
         {
-          "link": 373,
+          "link": 457,
           "name": "resize_width",
           "type": "INT",
           "widget": {
@@ -1316,7 +1412,7 @@
           }
         },
         {
-          "link": 374,
+          "link": 458,
           "name": "resize_height",
           "type": "INT",
           "widget": {
@@ -1329,7 +1425,6 @@
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            399,
             411
           ],
           "shape": 3,
@@ -1360,7 +1455,7 @@
         "1": 258
       },
       "flags": {},
-      "order": 34,
+      "order": 33,
       "mode": 0,
       "inputs": [
         {
@@ -1416,31 +1511,6 @@
       ]
     },
     {
-      "id": 187,
-      "type": "PreviewImage",
-      "pos": [
-        301.85964213947017,
-        831.7638673152418
-      ],
-      "size": {
-        "0": 210,
-        "1": 246
-      },
-      "flags": {},
-      "order": 35,
-      "mode": 0,
-      "inputs": [
-        {
-          "link": 399,
-          "name": "images",
-          "type": "IMAGE"
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "PreviewImage"
-      }
-    },
-    {
       "id": 193,
       "type": "VAEEncodeTiled",
       "pos": [
@@ -1452,7 +1522,7 @@
         "1": 78
       },
       "flags": {},
-      "order": 36,
+      "order": 34,
       "mode": 0,
       "inputs": [
         {
@@ -1496,7 +1566,7 @@
         "1": 262
       },
       "flags": {},
-      "order": 37,
+      "order": 35,
       "mode": 0,
       "inputs": [
         {
@@ -1540,7 +1610,7 @@
       "widgets_values": [
         462566908167076,
         "fixed",
-        35,
+        20,
         7,
         "dpmpp_2m",
         "karras",
@@ -1559,7 +1629,7 @@
         "1": 78
       },
       "flags": {},
-      "order": 38,
+      "order": 36,
       "mode": 0,
       "inputs": [
         {
@@ -1603,7 +1673,7 @@
         "1": 312.175048828125
       },
       "flags": {},
-      "order": 39,
+      "order": 37,
       "mode": 0,
       "inputs": [
         {
@@ -1619,110 +1689,6 @@
       ],
       "color": "#223",
       "bgcolor": "#335"
-    },
-    {
-      "id": 111,
-      "type": "ComfyDeploy",
-      "pos": [
-        -903,
-        873
-      ],
-      "size": {
-        "0": 210,
-        "1": 96
-      },
-      "flags": {},
-      "order": 15,
-      "mode": 0,
-      "properties": {
-        "workflow_name": "",
-        "workflow_id": "",
-        "version": ""
-      },
-      "widgets_values": [
-        "Transfer Style",
-        "8e3e9815-5556-4c37-95b8-a0982ea61b91",
-        2
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
-      "id": 1,
-      "type": "CheckpointLoaderSimple",
-      "pos": [
-        -1057,
-        1739
-      ],
-      "size": {
-        "0": 315,
-        "1": 98
-      },
-      "flags": {},
-      "order": 16,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            441
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            442,
-            443
-          ],
-          "shape": 3,
-          "slot_index": 1
-        },
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            277,
-            427
-          ],
-          "shape": 3,
-          "slot_index": 2
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CheckpointLoaderSimple"
-      },
-      "widgets_values": [
-        "juggernaut_reborn.safetensors"
-      ],
-      "color": "#332922",
-      "bgcolor": "#593930"
-    },
-    {
-      "id": 201,
-      "type": "Note",
-      "pos": [
-        -1880,
-        866
-      ],
-      "size": {
-        "0": 477.9673156738281,
-        "1": 163.3066864013672
-      },
-      "flags": {},
-      "order": 17,
-      "mode": 0,
-      "properties": {
-        "text": ""
-      },
-      "widgets_values": [
-        " ______                  ___             _____               __              \n|      |.-----.--------.'  _|.--.--.    |     \\.-----.-----.|  |.-----.--.--.\n|   ---||  _  |        |   _||  |  |    |  --  |  -__|  _  ||  ||  _  |  |  |\n|______||_____|__|__|__|__|  |___  |    |_____/|_____|   __||__||_____|___  |\n                             |_____|                 |__|             |_____|\n\nWorflow developed by https://twitter.com/BolilloSpartano\n\nYou can deploy this workflow in https://comfydeploy.com/ and get an API that you can use in your apps.\n\nhttps://github.com/EmmanuelMr18/Comfyui-Transfer-Style-Workflow"
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
     }
   ],
   "links": [
@@ -1855,22 +1821,6 @@
       "CONDITIONING"
     ],
     [
-      373,
-      139,
-      0,
-      178,
-      1,
-      "INT"
-    ],
-    [
-      374,
-      139,
-      1,
-      178,
-      2,
-      "INT"
-    ],
-    [
       387,
       125,
       0,
@@ -1907,22 +1857,6 @@
       186,
       0,
       178,
-      0,
-      "IMAGE"
-    ],
-    [
-      399,
-      178,
-      0,
-      187,
-      0,
-      "IMAGE"
-    ],
-    [
-      405,
-      115,
-      0,
-      189,
       0,
       "IMAGE"
     ],
@@ -2023,14 +1957,6 @@
       "IMAGE"
     ],
     [
-      447,
-      205,
-      0,
-      139,
-      0,
-      "IMAGE"
-    ],
-    [
       448,
       205,
       0,
@@ -2085,6 +2011,30 @@
       2,
       4,
       "FLOAT"
+    ],
+    [
+      456,
+      205,
+      0,
+      209,
+      0,
+      "IMAGE"
+    ],
+    [
+      457,
+      209,
+      4,
+      178,
+      1,
+      "INT"
+    ],
+    [
+      458,
+      209,
+      5,
+      178,
+      2,
+      "INT"
     ]
   ],
   "groups": [
