@@ -217,8 +217,8 @@
       "id": 199,
       "type": "Note",
       "pos": [
-        -286,
-        884
+        -289,
+        872
       ],
       "size": {
         "0": 240.38986206054688,
@@ -909,8 +909,8 @@
       "id": 209,
       "type": "Image Size to Number",
       "pos": [
-        -286,
-        713
+        -278,
+        710
       ],
       "size": {
         "0": 229.20001220703125,
@@ -966,8 +966,7 @@
           "links": [
             458
           ],
-          "shape": 3,
-          "slot_index": 5
+          "shape": 3
         }
       ],
       "properties": {
@@ -1417,7 +1416,8 @@
           "type": "INT",
           "widget": {
             "name": "resize_height"
-          }
+          },
+          "slot_index": 2
         }
       ],
       "outputs": [
